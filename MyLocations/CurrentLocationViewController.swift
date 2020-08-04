@@ -43,7 +43,14 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
             return
         }
         
-        startLocationManager()
+        // To handle the user pressing 'Stop/Get My Location'
+        if updatingLocation {
+            stopLocationManager()
+        } else {
+            location = nil
+            lastLocationError = nil
+            startLocationManager()
+        }
         updateLabels()
     }
     
@@ -63,9 +70,25 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         let newLocation = locations.last!
         print("didUpdateLocations \(newLocation)")
         
-        location = newLocation
-        lastLocationError = nil
-        updateLabels()
+        if newLocation.timestamp.timeIntervalSinceNow < -5 {
+            return
+        }
+        
+        if newLocation.horizontalAccuracy < 0 {
+            return
+        }
+        
+        if location == nil || location!.horizontalAccuracy > newLocation.horizontalAccuracy {
+            lastLocationError = nil
+            location = newLocation
+        
+            if newLocation.horizontalAccuracy <= locationManager.desiredAccuracy {
+                print("*** We're done!")
+                stopLocationManager()
+            }
+        
+            updateLabels()
+        }
     }
     
     //MARK:- Helper Methods
@@ -91,6 +114,14 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
             locationManager.stopUpdatingLocation()
             locationManager.delegate = self
             updatingLocation = false
+        }
+    }
+    
+    func configureGetButton() {
+        if updatingLocation {
+            getButton.setTitle("Stop", for: .normal)
+        } else {
+            getButton.setTitle("Get My Location", for: .normal)
         }
     }
     
@@ -122,6 +153,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
             }
             messageLabel.text = statusMessage
         }
+        configureGetButton()
     }
 }
 
