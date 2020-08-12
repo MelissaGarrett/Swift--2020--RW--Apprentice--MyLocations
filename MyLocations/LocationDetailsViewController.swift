@@ -59,6 +59,12 @@ class LocationsDetailsViewController: UITableViewController {
     @IBAction func done() {
         let hudView = HudView.hud(inView: navigationController!.view, animated: true)
         hudView.text = "Tagged"
+        
+        // Wait to close the screen so HUD can be viewed
+        afterDelay(0.6, run: {
+            hudView.hide()
+            self.navigationController?.popViewController(animated: true)
+        })
     }
     
     @IBAction func cancel() {
