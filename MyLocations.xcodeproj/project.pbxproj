@@ -18,6 +18,9 @@
 		019EE1EB24E23A94004B23E4 /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1EA24E23A94004B23E4 /* CategoryPickerViewController.swift */; };
 		019EE1ED24E2FC69004B23E4 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1EC24E2FC69004B23E4 /* HudView.swift */; };
 		019EE1EF24E3997E004B23E4 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1EE24E3997E004B23E4 /* Functions.swift */; };
+		019EE1F224E5C12C004B23E4 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1F024E5C12B004B23E4 /* DataModel.xcdatamodeld */; };
+		019EE1F524E5C6E7004B23E4 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1F324E5C6E7004B23E4 /* Location+CoreDataClass.swift */; };
+		019EE1F624E5C6E7004B23E4 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1F424E5C6E7004B23E4 /* Location+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		019EE1EA24E23A94004B23E4 /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		019EE1EC24E2FC69004B23E4 /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		019EE1EE24E3997E004B23E4 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		019EE1F124E5C12C004B23E4 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		019EE1F324E5C6E7004B23E4 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		019EE1F424E5C6E7004B23E4 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,8 @@
 		013BB86524D8BD05006212BA = {
 			isa = PBXGroup;
 			children = (
+				019EE1F324E5C6E7004B23E4 /* Location+CoreDataClass.swift */,
+				019EE1F424E5C6E7004B23E4 /* Location+CoreDataProperties.swift */,
 				013BB87024D8BD05006212BA /* MyLocations */,
 				013BB86F24D8BD05006212BA /* Products */,
 			);
@@ -73,6 +81,7 @@
 				019EE1EA24E23A94004B23E4 /* CategoryPickerViewController.swift */,
 				019EE1EC24E2FC69004B23E4 /* HudView.swift */,
 				019EE1EE24E3997E004B23E4 /* Functions.swift */,
+				019EE1F024E5C12B004B23E4 /* DataModel.xcdatamodeld */,
 				013BB87724D8BD05006212BA /* SecondViewController.swift */,
 				013BB87924D8BD05006212BA /* Main.storyboard */,
 				013BB87C24D8BD0D006212BA /* Assets.xcassets */,
@@ -155,11 +164,14 @@
 			files = (
 				019EE1EB24E23A94004B23E4 /* CategoryPickerViewController.swift in Sources */,
 				013BB87824D8BD05006212BA /* SecondViewController.swift in Sources */,
+				019EE1F624E5C6E7004B23E4 /* Location+CoreDataProperties.swift in Sources */,
 				013BB87624D8BD05006212BA /* CurrentLocationViewController.swift in Sources */,
 				019EE1EF24E3997E004B23E4 /* Functions.swift in Sources */,
 				013BB87224D8BD05006212BA /* AppDelegate.swift in Sources */,
 				013BB87424D8BD05006212BA /* SceneDelegate.swift in Sources */,
+				019EE1F224E5C12C004B23E4 /* DataModel.xcdatamodeld in Sources */,
 				019EE1ED24E2FC69004B23E4 /* HudView.swift in Sources */,
+				019EE1F524E5C6E7004B23E4 /* Location+CoreDataClass.swift in Sources */,
 				019EE1E724E209EC004B23E4 /* LocationDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +370,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		019EE1F024E5C12B004B23E4 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				019EE1F124E5C12C004B23E4 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 019EE1F124E5C12C004B23E4 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 013BB86624D8BD05006212BA /* Project object */;
 }
