@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import CoreLocation
+import CoreData
 
 // a private GLOBAL variable (only visible inside this file)
 // create here so you only create the instance once and re-use it
@@ -31,6 +32,8 @@ class LocationsDetailsViewController: UITableViewController {
     var placemark: CLPlacemark?
     
     var categoryName = "No Category"
+    
+    var managedObjectContext: NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
