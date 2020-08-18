@@ -44,6 +44,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             navController = tabViewControllers[1] as! UINavigationController
             let controller2 = navController.viewControllers.first as! LocationsViewController
             controller2.managedObjectContext = managedObjectContext
+            
+            // To fix an iOS bug that doesn't add a new tagged location to
+            // LocationsViewController if this tab hasn't already been displayed
+            let _ = controller2.view
         }
         print(applicationDocumentsDirectory)
         
