@@ -329,7 +329,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRr-Vw-W98" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2138" y="-321"/>
+            <point key="canvasLocation" x="2217" y="-320"/>
         </scene>
         <!--Category Picker View Controller-->
         <scene sceneID="T2g-FH-WoL">
@@ -434,6 +434,7 @@
                                 <connections>
                                     <outlet property="addressLabel" destination="fgZ-RU-zR4" id="Bo5-q6-LHc"/>
                                     <outlet property="descriptionLabel" destination="pn0-oB-76z" id="V7k-ss-VqC"/>
+                                    <segue destination="xZu-eP-p43" kind="show" identifier="EditLocation" id="1Ry-ML-TlI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -485,6 +486,9 @@
             <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1Ry-ML-TlI"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="first" width="30" height="30"/>
     </resources>
