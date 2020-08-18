@@ -22,6 +22,7 @@
 		019EE1F524E5C6E7004B23E4 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1F324E5C6E7004B23E4 /* Location+CoreDataClass.swift */; };
 		019EE1F624E5C6E7004B23E4 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1F424E5C6E7004B23E4 /* Location+CoreDataProperties.swift */; };
 		019EE1F824EC5C84004B23E4 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1F724EC5C84004B23E4 /* LocationsViewController.swift */; };
+		019EE1FA24EC67E5004B23E4 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1F924EC67E5004B23E4 /* LocationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		019EE1F324E5C6E7004B23E4 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
 		019EE1F424E5C6E7004B23E4 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		019EE1F724EC5C84004B23E4 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		019EE1F924EC67E5004B23E4 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				019EE1E624E209EC004B23E4 /* LocationDetailsViewController.swift */,
 				019EE1EA24E23A94004B23E4 /* CategoryPickerViewController.swift */,
 				019EE1F724EC5C84004B23E4 /* LocationsViewController.swift */,
+				019EE1F924EC67E5004B23E4 /* LocationCell.swift */,
 				019EE1EC24E2FC69004B23E4 /* HudView.swift */,
 				019EE1EE24E3997E004B23E4 /* Functions.swift */,
 				019EE1F024E5C12B004B23E4 /* DataModel.xcdatamodeld */,
@@ -170,6 +173,7 @@
 				019EE1F624E5C6E7004B23E4 /* Location+CoreDataProperties.swift in Sources */,
 				013BB87624D8BD05006212BA /* CurrentLocationViewController.swift in Sources */,
 				019EE1EF24E3997E004B23E4 /* Functions.swift in Sources */,
+				019EE1FA24EC67E5004B23E4 /* LocationCell.swift in Sources */,
 				013BB87224D8BD05006212BA /* AppDelegate.swift in Sources */,
 				013BB87424D8BD05006212BA /* SceneDelegate.swift in Sources */,
 				019EE1F224E5C12C004B23E4 /* DataModel.xcdatamodeld in Sources */,

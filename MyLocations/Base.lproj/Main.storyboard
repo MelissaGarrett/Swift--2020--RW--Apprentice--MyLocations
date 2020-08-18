@@ -400,7 +400,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="58" id="km5-2L-UoW">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="58" id="km5-2L-UoW" customClass="LocationCell" customModule="MyLocations" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="km5-2L-UoW" id="2UQ-7x-hUf">
@@ -431,6 +431,10 @@
                                         <constraint firstItem="pn0-oB-76z" firstAttribute="top" secondItem="2UQ-7x-hUf" secondAttribute="top" constant="8" id="zMv-ng-1vN"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="fgZ-RU-zR4" id="Bo5-q6-LHc"/>
+                                    <outlet property="descriptionLabel" destination="pn0-oB-76z" id="V7k-ss-VqC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
