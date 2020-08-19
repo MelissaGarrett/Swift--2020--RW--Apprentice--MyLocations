@@ -32,8 +32,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        // Passing the context from AppDelegate to CurrentLocationVC or
-        // LocationsVC
+        // Passing the context from SceneDelegate to CurrentLocationVC,
+        // LocationsVC, or MapViewVC
         let tabController = window!.rootViewController as! UITabBarController
         
         if let tabViewControllers = tabController.viewControllers {
@@ -44,6 +44,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             navController = tabViewControllers[1] as! UINavigationController
             let controller2 = navController.viewControllers.first as! LocationsViewController
             controller2.managedObjectContext = managedObjectContext
+            
+            navController = tabViewControllers[2] as! UINavigationController
+            let controller3 = navController.viewControllers.first! as! MapViewController
+            controller3.managedObjectContext = managedObjectContext
             
             // To fix an iOS bug that doesn't add a new tagged location to
             // LocationsViewController if this tab hasn't already been displayed
