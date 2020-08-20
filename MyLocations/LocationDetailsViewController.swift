@@ -55,6 +55,8 @@ class LocationsDetailsViewController: UITableViewController {
     
     var image: UIImage?
     
+    var observer: Any! // To unresgister observers although no longer required
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -80,6 +82,8 @@ class LocationsDetailsViewController: UITableViewController {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         gestureRecognizer.cancelsTouchesInView = false
         tableView.addGestureRecognizer(gestureRecognizer)
+        
+        listenForBackgroundNotification()
         
     }
     
@@ -161,6 +165,26 @@ class LocationsDetailsViewController: UITableViewController {
         addPhotoLabel.text = ""
         
         tableView.reloadData()
+    }
+    
+    // To dismiss an active action sheet, image picker, or keyboard
+    // if the app moves to background
+    func listenForBackgroundNotification() {
+        observer = NotificationCenter.default.addObserver(forName: UIScene.didEnterBackgroundNotification, object: nil, queue: OperationQueue.main) { [weak self] _ in
+            if let weakSelf = self { // self is now optional so unwrap
+                if weakSelf.presentedViewController != nil {
+                    weakSelf.dismiss(animated: false, completion: nil)
+                }
+            
+                weakSelf.descriptionTextView.resignFirstResponder()
+            }
+        }
+    }
+    
+    // For learning purposes only; iOS handles removing observers now
+    deinit {
+        print("*** deinit \(self)")
+        NotificationCenter.default.removeObserver(observer!)
     }
     
     //MARK:- Navigation
