@@ -27,6 +27,9 @@ class LocationsDetailsViewController: UITableViewController {
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var addPhotoLabel: UILabel!
+    @IBOutlet weak var imageHeight: NSLayoutConstraint!
     
     var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     var placemark: CLPlacemark?
@@ -49,6 +52,8 @@ class LocationsDetailsViewController: UITableViewController {
         }
     }
     var descriptionText = ""
+    
+    var image: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -147,6 +152,15 @@ class LocationsDetailsViewController: UITableViewController {
     
     func format(date: Date) -> String {
         return dateFormatter.string(from: date)
+    }
+    
+    func show(image: UIImage) {
+        imageView.image = image
+        imageView.isHidden = false
+        imageHeight.constant = 260
+        addPhotoLabel.text = ""
+        
+        tableView.reloadData()
     }
     
     //MARK:- Navigation
@@ -248,6 +262,12 @@ extension LocationsDetailsViewController: UIImagePickerControllerDelegate, UINav
     
     //MARK:- Image Picker Delegates
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+        
+        if let theImage = image {
+            show(image: theImage)
+        }
+        
         dismiss(animated: true, completion: nil)
     }
     

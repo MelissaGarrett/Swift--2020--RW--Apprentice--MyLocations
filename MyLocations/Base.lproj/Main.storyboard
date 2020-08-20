@@ -186,10 +186,20 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TIw-sY-ONt">
+                                                    <rect key="frame" x="101" y="11" width="274" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="bnx-oi-mtK"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="TIw-sY-ONt" secondAttribute="trailing" id="F7j-XP-tyU"/>
                                                 <constraint firstItem="pLC-Xu-O8E" firstAttribute="centerY" secondItem="ZVv-fo-rpx" secondAttribute="centerY" id="IQl-69-5sJ"/>
+                                                <constraint firstItem="TIw-sY-ONt" firstAttribute="top" secondItem="ZVv-fo-rpx" secondAttribute="topMargin" id="KzE-j8-Uaz"/>
                                                 <constraint firstItem="pLC-Xu-O8E" firstAttribute="leading" secondItem="ZVv-fo-rpx" secondAttribute="leadingMargin" id="La7-kW-Wfo"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="TIw-sY-ONt" secondAttribute="bottom" id="nlp-5M-rz8"/>
+                                                <constraint firstItem="TIw-sY-ONt" firstAttribute="leading" secondItem="pLC-Xu-O8E" secondAttribute="trailing" id="uZK-GV-J1z"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -319,17 +329,20 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPhotoLabel" destination="pLC-Xu-O8E" id="H9S-C8-VJV"/>
                         <outlet property="addressLabel" destination="zbF-PP-caX" id="acT-cs-K10"/>
                         <outlet property="categoryLabel" destination="dGG-NS-j3u" id="KQM-rS-w53"/>
                         <outlet property="dateLabel" destination="WQP-4Q-VNz" id="nqk-rv-2ej"/>
                         <outlet property="descriptionTextView" destination="7Zd-7c-Fpa" id="2sB-0Z-0i0"/>
+                        <outlet property="imageHeight" destination="bnx-oi-mtK" id="0Sv-eo-izo"/>
+                        <outlet property="imageView" destination="TIw-sY-ONt" id="VNQ-Y3-S7B"/>
                         <outlet property="latitudeLabel" destination="TWC-Fa-Tby" id="oQq-zD-oBY"/>
                         <outlet property="longitudeLabel" destination="uXm-Oy-34a" id="vPN-r3-9aB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRr-Vw-W98" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2217" y="-320"/>
+            <point key="canvasLocation" x="2215.9420289855075" y="-320.08928571428572"/>
         </scene>
         <!--Category Picker View Controller-->
         <scene sceneID="T2g-FH-WoL">
