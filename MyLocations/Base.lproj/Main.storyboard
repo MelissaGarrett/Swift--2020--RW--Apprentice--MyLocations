@@ -422,32 +422,42 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pn0-oB-76z">
-                                            <rect key="frame" x="20" y="8" width="374" height="21"/>
+                                            <rect key="frame" x="76" y="8" width="318" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgZ-RU-zR4">
-                                            <rect key="frame" x="20" y="37" width="374" height="17"/>
+                                            <rect key="frame" x="76" y="37" width="318" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.0" alpha="0.50222839765100669" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HP4-gY-w5v">
+                                            <rect key="frame" x="16" y="2" width="52" height="52"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="52" id="GHD-Hb-Yhj"/>
+                                                <constraint firstAttribute="height" constant="52" id="VYR-fV-uMO"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="fgZ-RU-zR4" firstAttribute="leading" secondItem="2UQ-7x-hUf" secondAttribute="leading" constant="20" id="9RQ-rg-b0l"/>
+                                        <constraint firstItem="HP4-gY-w5v" firstAttribute="top" secondItem="2UQ-7x-hUf" secondAttribute="top" constant="2" id="3Do-Jy-yfM"/>
                                         <constraint firstAttribute="trailing" secondItem="pn0-oB-76z" secondAttribute="trailing" constant="20" id="B8R-Lr-n6E"/>
-                                        <constraint firstItem="pn0-oB-76z" firstAttribute="leading" secondItem="2UQ-7x-hUf" secondAttribute="leading" constant="20" id="N4n-4E-SMa"/>
+                                        <constraint firstItem="HP4-gY-w5v" firstAttribute="leading" secondItem="2UQ-7x-hUf" secondAttribute="leading" constant="16" id="Hdv-6b-Bjc"/>
                                         <constraint firstAttribute="trailing" secondItem="fgZ-RU-zR4" secondAttribute="trailing" constant="20" id="TJE-oL-Bad"/>
+                                        <constraint firstItem="pn0-oB-76z" firstAttribute="leading" secondItem="HP4-gY-w5v" secondAttribute="trailing" constant="8" id="TVI-4m-Aq1"/>
                                         <constraint firstItem="fgZ-RU-zR4" firstAttribute="top" secondItem="pn0-oB-76z" secondAttribute="bottom" constant="8" id="WYW-Gb-bBR"/>
                                         <constraint firstItem="fgZ-RU-zR4" firstAttribute="top" secondItem="pn0-oB-76z" secondAttribute="bottom" constant="8" id="nkF-Fo-FHu"/>
                                         <constraint firstAttribute="bottom" secondItem="fgZ-RU-zR4" secondAttribute="bottom" constant="4" id="t3N-MH-Fl6"/>
+                                        <constraint firstItem="fgZ-RU-zR4" firstAttribute="leading" secondItem="HP4-gY-w5v" secondAttribute="trailing" constant="8" id="yVv-A2-gCP"/>
                                         <constraint firstItem="pn0-oB-76z" firstAttribute="top" secondItem="2UQ-7x-hUf" secondAttribute="top" constant="8" id="zMv-ng-1vN"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addressLabel" destination="fgZ-RU-zR4" id="Bo5-q6-LHc"/>
                                     <outlet property="descriptionLabel" destination="pn0-oB-76z" id="V7k-ss-VqC"/>
+                                    <outlet property="photoImageView" destination="HP4-gY-w5v" id="eS3-U1-zVz"/>
                                     <segue destination="xZu-eP-p43" kind="show" identifier="EditLocation" id="1Ry-ML-TlI"/>
                                 </connections>
                             </tableViewCell>
@@ -565,7 +575,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yrT-vb-ftq"/>
+        <segue reference="1Ry-ML-TlI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="first" width="30" height="30"/>

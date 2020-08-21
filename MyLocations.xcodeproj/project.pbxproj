@@ -24,6 +24,7 @@
 		019EE1F824EC5C84004B23E4 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1F724EC5C84004B23E4 /* LocationsViewController.swift */; };
 		019EE1FA24EC67E5004B23E4 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1F924EC67E5004B23E4 /* LocationCell.swift */; };
 		019EE1FC24EDA281004B23E4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1FB24EDA281004B23E4 /* MapViewController.swift */; };
+		019EE1FE24EF7D81004B23E4 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1FD24EF7D81004B23E4 /* UIImage+Resize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		019EE1F724EC5C84004B23E4 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		019EE1F924EC67E5004B23E4 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		019EE1FB24EDA281004B23E4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		019EE1FD24EF7D81004B23E4 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				019EE1F724EC5C84004B23E4 /* LocationsViewController.swift */,
 				019EE1FB24EDA281004B23E4 /* MapViewController.swift */,
 				019EE1F924EC67E5004B23E4 /* LocationCell.swift */,
+				019EE1FD24EF7D81004B23E4 /* UIImage+Resize.swift */,
 				019EE1EC24E2FC69004B23E4 /* HudView.swift */,
 				019EE1EE24E3997E004B23E4 /* Functions.swift */,
 				019EE1F024E5C12B004B23E4 /* DataModel.xcdatamodeld */,
@@ -179,6 +182,7 @@
 				019EE1FA24EC67E5004B23E4 /* LocationCell.swift in Sources */,
 				013BB87224D8BD05006212BA /* AppDelegate.swift in Sources */,
 				013BB87424D8BD05006212BA /* SceneDelegate.swift in Sources */,
+				019EE1FE24EF7D81004B23E4 /* UIImage+Resize.swift in Sources */,
 				019EE1F224E5C12C004B23E4 /* DataModel.xcdatamodeld in Sources */,
 				019EE1ED24E2FC69004B23E4 /* HudView.swift in Sources */,
 				019EE1F524E5C6E7004B23E4 /* Location+CoreDataClass.swift in Sources */,
