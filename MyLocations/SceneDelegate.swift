@@ -32,6 +32,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        customizeAppearance()
+        
         // Passing the context from SceneDelegate to CurrentLocationVC,
         // LocationsVC, or MapViewVC
         let tabController = window!.rootViewController as! UITabBarController
@@ -89,23 +91,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     //MARK:- Helper methods
-        func listenForFatalCoreDataNotifications() {
-            NotificationCenter.default.addObserver(forName: CoreDataSaveFailedNotification, object: nil, queue: OperationQueue.main, using: { notification in
-                let message = """
-    There was a fatal error in the app and it cannot continue.
+    func listenForFatalCoreDataNotifications() {
+        NotificationCenter.default.addObserver(forName: CoreDataSaveFailedNotification, object: nil, queue: OperationQueue.main, using: { notification in
+            let message = """
+There was a fatal error in the app and it cannot continue.
 
-    Press OK to terminate the app. Sorry for the inconvenience.
-    """
-                
-                let alert = UIAlertController(title: "Internal Error", message: message, preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .default) { _ in
-                    let exception = NSException(name: NSExceptionName.internalInconsistencyException, reason: "Fatal Core Data Error", userInfo: nil)
-                    exception.raise()
-                }
-                alert.addAction(action)
-                
-                let tabController = self.window!.rootViewController!
-                tabController.present(alert, animated: true, completion: nil)
-            })
-        }
+Press OK to terminate the app. Sorry for the inconvenience.
+"""
+            
+            let alert = UIAlertController(title: "Internal Error", message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default) { _ in
+                let exception = NSException(name: NSExceptionName.internalInconsistencyException, reason: "Fatal Core Data Error", userInfo: nil)
+                exception.raise()
+            }
+            alert.addAction(action)
+            
+            let tabController = self.window!.rootViewController!
+            tabController.present(alert, animated: true, completion: nil)
+        })
+    }
+    
+    func customizeAppearance() {
+        UINavigationBar.appearance().barTintColor = UIColor.black
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        UITabBar.appearance().barTintColor = UIColor.black
+        let tintColor = UIColor(red: 255/255.0, green: 238/255.0, blue: 136/255.0, alpha: 1.0)
+        UITabBar.appearance().tintColor = tintColor
+    }
 }
