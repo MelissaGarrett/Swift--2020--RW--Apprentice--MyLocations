@@ -25,6 +25,7 @@
 		019EE1FA24EC67E5004B23E4 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1F924EC67E5004B23E4 /* LocationCell.swift */; };
 		019EE1FC24EDA281004B23E4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1FB24EDA281004B23E4 /* MapViewController.swift */; };
 		019EE1FE24EF7D81004B23E4 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1FD24EF7D81004B23E4 /* UIImage+Resize.swift */; };
+		019EE20024F1C70C004B23E4 /* String+AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1FF24F1C70C004B23E4 /* String+AddText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		019EE1F924EC67E5004B23E4 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		019EE1FB24EDA281004B23E4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		019EE1FD24EF7D81004B23E4 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		019EE1FF24F1C70C004B23E4 /* String+AddText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AddText.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				019EE1FB24EDA281004B23E4 /* MapViewController.swift */,
 				019EE1F924EC67E5004B23E4 /* LocationCell.swift */,
 				019EE1FD24EF7D81004B23E4 /* UIImage+Resize.swift */,
+				019EE1FF24F1C70C004B23E4 /* String+AddText.swift */,
 				019EE1EC24E2FC69004B23E4 /* HudView.swift */,
 				019EE1EE24E3997E004B23E4 /* Functions.swift */,
 				019EE1F024E5C12B004B23E4 /* DataModel.xcdatamodeld */,
@@ -189,6 +192,7 @@
 				019EE1E724E209EC004B23E4 /* LocationDetailsViewController.swift in Sources */,
 				019EE1F824EC5C84004B23E4 /* LocationsViewController.swift in Sources */,
 				019EE1FC24EDA281004B23E4 /* MapViewController.swift in Sources */,
+				019EE20024F1C70C004B23E4 /* String+AddText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
