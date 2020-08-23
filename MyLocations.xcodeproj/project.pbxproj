@@ -27,6 +27,7 @@
 		019EE20024F1C70C004B23E4 /* String+AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE1FF24F1C70C004B23E4 /* String+AddText.swift */; };
 		019EE20224F1D799004B23E4 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE20124F1D799004B23E4 /* MyTabBarController.swift */; };
 		019EE20424F1D8B3004B23E4 /* MyImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EE20324F1D8B3004B23E4 /* MyImagePickerController.swift */; };
+		019EE20724F2140D004B23E4 /* Sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 019EE20624F2140D004B23E4 /* Sound.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		019EE1FF24F1C70C004B23E4 /* String+AddText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AddText.swift"; sourceTree = "<group>"; };
 		019EE20124F1D799004B23E4 /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		019EE20324F1D8B3004B23E4 /* MyImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImagePickerController.swift; sourceTree = "<group>"; };
+		019EE20624F2140D004B23E4 /* Sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sound.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +105,19 @@
 				019EE1F024E5C12B004B23E4 /* DataModel.xcdatamodeld */,
 				013BB87924D8BD05006212BA /* Main.storyboard */,
 				013BB87C24D8BD0D006212BA /* Assets.xcassets */,
+				019EE20524F2140D004B23E4 /* Sound */,
 				013BB87E24D8BD0D006212BA /* LaunchScreen.storyboard */,
 				013BB88124D8BD0D006212BA /* Info.plist */,
 			);
 			path = MyLocations;
+			sourceTree = "<group>";
+		};
+		019EE20524F2140D004B23E4 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				019EE20624F2140D004B23E4 /* Sound.caf */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +180,7 @@
 			files = (
 				013BB88024D8BD0D006212BA /* LaunchScreen.storyboard in Resources */,
 				013BB87D24D8BD0D006212BA /* Assets.xcassets in Resources */,
+				019EE20724F2140D004B23E4 /* Sound.caf in Resources */,
 				013BB87B24D8BD05006212BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
